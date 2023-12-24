@@ -1,9 +1,11 @@
+import Body from './components/Body';
 import './index.css';
 
+
 function App() {
-  return <div className='text-3xl font-bold text-green-800'>
-    Hello Namsate GPT is here..
-    </div>
+  return (
+    <Body/>
+  )
 }
 
 export default App;
