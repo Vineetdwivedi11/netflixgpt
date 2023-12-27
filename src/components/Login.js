@@ -3,7 +3,6 @@ import Header from './Header';
 import {checkvalidData} from '../utils/validate' ;
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile} from "firebase/auth";
 import {auth} from "../utils/firebase";
-import {useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 import { BACKGROUND_IMAGE, USER_AVATAR} from '../utils/constant';
@@ -31,15 +30,13 @@ const Login = () => {
             .then((useCredential)=>{
                 const user = useCredential.user;
                 updateProfile(user, {
-            displayName: name.current.value, photoURL: {USER_AVATAR},
+            displayName: name.current.value, photoURL: USER_AVATAR,
             }).then(() => {
                 const {uid, email, displayName, photoURL} = auth.currentUser;
                 dispatch(addUser({uid: uid, email:email, displayName: displayName, photoURL:photoURL}));
             }).catch((error) => {
                 SetErrorMessage(error.message)
-            });
-                console.log(user);
-               
+            });               
             })
             .catch((error)=>{
                 const errorCode = error.code;
