@@ -14,4 +14,8 @@ export const API_OPTIONS = {
           Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhZGE4ZmU0YzVjOGQ1OWUxZTJhM2M5ODg3NGUwNjE4MCIsInN1YiI6IjY1OGJmNWM4NGQyM2RkMDcyYmM1MTMxYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.94Ga2xdBTcN-0jgiXXBOR7EkJKtcshkoV4a2GMOqa0E'
         }
       };
- export const IMAGE_CDN = "https://image.tmdb.org/t/p/w500"
+ export const IMAGE_CDN = "https://image.tmdb.org/t/p/w500";
+
+ export const SUPPORTED_LANGUAGES = [{identifier : "en", name: "English"},
+                                    {identifier : "hindi", name: "Hindi"},
+                                    {identifier : "spanish", name: "Spanish"}]
